@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://https://flask-app-vercel-sooty.vercel.app/.well-known/openapi.yaml",
+    "url": "https://flask-app-vercel-sooty.vercel.app/.well-known/openapi.yaml",
     "is_user_authenticated": false
   },
   "logo_url": "https://example.com/logo.png",
