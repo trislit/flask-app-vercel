@@ -3,7 +3,7 @@ info:
   title: Nameless API
   version: 1.0.0
 servers:
-  - url: flask-hello-world-git-main-trislit.vercel.app
+  - url: https://flask-app-vercel-sooty.vercel.app/
 paths:
   /environments:
     post:
