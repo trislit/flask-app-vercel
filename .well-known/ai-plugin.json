@@ -1,0 +1,19 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "StealthTest DevNet Creator",
+  "name_for_model": "stealthtest",
+  "description_for_human": "Create devnet in StealthTest via ChatGPT.",
+  "description_for_model": "Create environments in StealthTest. It can create environments with specified names, chain IDs, and networks.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://flask-hello-world-git-main-trislit.vercel.app/api/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://example.com/logo.png",
+  "contact_email": "your_actual_support_email@yourdomain.com",
+  "legal_info_url": "https://your_actual_domain.com/legal"
+}
+

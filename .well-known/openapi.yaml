@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Nameless API
+  version: 1.0.0
+servers:
+  - url: flask-hello-world-git-main-trislit.vercel.app
+paths:
+  /environments:
+    post:
+      summary: Create a new environment
+      operationId: createEnvironment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "string"
+                chainId:
+                  type: integer
+                  example: 0
+                networks:
+                  type: array
+                  items:
+                    type: string
+                  example:
+                    - "string"
+            example:
+              name: "Nameless"
+              chainId: 1234
+              networks:
+                - "eth"
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      accountId:
+                        type: string
+                      createdAt:
+                        type: integer
+                      chainId:
+                        type: integer
+                      accountType:
+                        type: string
+                      name:
+                        type: string
+                      namespace:
+                        type: string
+                      accounts:
+                        type: object
+                      status:
+                        type: string
+                      networks:
+                        type: object
+                  message:
+                    type: string
+                  success:
+                    type: boolean
+              example:
+                data:
+                  id: "asBkqVqynvkJddXNc0Oog"
+                  accountId: "sodM22-OIixbRuajh8hE0"
+                  createdAt: 1683114747172
+                  chainId: 1234
+                  accountType: "organization"
+                  name: "Nameless"
+                  namespace: "[namespace]"
+                  accounts: {}
+                  status: "PENDING"
+                  networks:
+                    eth:
+                      url: "https://8543fc0f-121c-452f-9628-925dccc108d9.ethereum.nameless.io"
+                      status: "PENDING"
+                message: "Environment \"Nameless\" (asBkqVqynvkJddXNc0Oog) is being created..."
+                success: true
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        500:
+          description: Internal Server Error
+  
