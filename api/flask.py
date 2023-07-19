@@ -1,4 +1,11 @@
-from flask import Flask
+import os
+import requests
+import logging
+from waitress import serve
+from flask import Flask, request, send_from_directory, jsonify
+
+# Set up logging
+logging.basicConfig(filename='app.log', level=logging.DEBUG)
 
 app = Flask(__name__)
 
